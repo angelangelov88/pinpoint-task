@@ -21,6 +21,29 @@
         <li class="li-header"><a href="#">FAQ</a></li>
       </ul>
       <a href="#" class="header-btn">View Jobs</a>
+
+<!-- Extra code for the drop down hamburger menu on small screen sizes -->
+      <div id="header-small">
+        <ul>
+          <li class="li-header-small"><a href="#">Who we are</a></li>
+          <li class="li-header-small"><a href="#">#LifeatGoco</a></li>
+          <li class="li-header-small"><a href="#">What's in it for you</a></li>
+          <li class="li-header-small"><a href="#">GoFurther Academy</a></li>
+          <li class="li-header-small"><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+<!-- Hamburger menu itself -->
+      <div class="btn-menu-xs" onclick="openCloseNav()">
+          <div class="menu-lines">
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>
+              <div class="menu-line"></div>	
+          </div>
+          <div class="menu-x">x</div>
+              <p class="menu-title">MENU</p>						
+      </div>
+
     </header>
     <main>
       <div class="hero-image-container">
@@ -57,7 +80,8 @@
             <a href="#" class="hero-btn">Employee journeys
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </a>
-            </div>
+          </div>
+          <img class="card-image-small-screen" src="./assets/images/emma.jpeg" alt="card-logos">
           <div class="card-image-3 card-image">
             <div class="image-text-container">
               <h2>Follow Emma's journey to finding her place at GoCo</h2>
@@ -68,7 +92,7 @@
           </div>
         </div>
         <div class="glassdoor-card">
-          <img src="../Project/assets/images/glassdoor_logotype.png" alt="glassdoor-logo">
+          <img src="../pinpoint-task/assets/images/glassdoor_logotype.png" alt="glassdoor-logo">
           <h1>"Dynamic, industry-leading environment with great benefits"</h1>
           <p>Former Employee, Content Specialist in Newport,Wales</p>
           <p id="small-text">A selected review from Glassdoor, October 2020.</p>
@@ -129,5 +153,9 @@
 
 
   </div>
+
+<!-- JavaScript file -->
+  <script src="assets/JS/main.js"></script>
+
 </body>
 </html>

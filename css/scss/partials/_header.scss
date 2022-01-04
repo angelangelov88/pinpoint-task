@@ -8,7 +8,9 @@ li {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 3rem 0rem 3rem;
+  @media only screen and (min-width: $break-xl) {
+    margin: 2rem 3rem 0rem 3rem;
+}
 }
 
 #logo {
@@ -17,10 +19,104 @@ header {
 }
 
 #ul-header {
-  display: flex;
+  display: none;
+  @media only screen and (min-width: $break-l) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+}
+
+//I added an extra html for the header for small screens because the main one kept misplacing other elements. This one works only on small screens and change to display:none for bigger
+#header-small {
+  width: 86%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  background-color: rgba($brand-color, 0.8);
+  position: absolute;
+  display: none;
+  z-index: 2;
+  // margin-left: -6rem;
+  margin-top: 56px;
   margin-left: auto;
   margin-right: auto;
+  @media only screen and (min-width: $break-m) {
+    display: none;
 }
+  @media screen and (-ms-high-contrast: none) {
+    text-align: right;
+}
+}
+
+//Some styling that could not go in the #header-small
+#header-small ul {
+  list-style-type: none;
+  text-align: end;
+  padding-right: 10px;
+}
+
+//Separating the li elements on small screen (the drop down)
+.li-header-small {
+  line-height: 45px;
+}
+//Hamburger styling
+.btn-menu-xs {
+  background-color: $brand-color;
+  height: 55px;
+  width: 65px;
+  border-radius: 4px;
+  // float: right;
+  // margin-top: -77px;
+  // margin-right: 10px;
+  @media only screen and (min-width: $break-l) {
+    display: none;
+}
+}
+
+.btn-menu-xs:hover {
+	//background-color: darken($color: $brand-color-dark, $amount: 10%);
+  // background-color: darken($color: #333a56, $amount: 10%);
+  background-color: $brand-color;
+  cursor: pointer;
+}
+
+// The next few properties are for the hamburger
+.menu-lines {
+  padding: 10px 0 4px 16px;
+  @media only screen and (min-width: $break-l) {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 33px;
+  margin: 10px auto 5px;
+}
+}
+
+.menu-x {
+  display: none;
+  color: white;
+  font-size: 33px;
+  margin-top: 1px;
+  margin-left: 24px;
+}
+
+.menu-line {
+  width: 33px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.menu-title {
+  font-size: 12px;
+  text-align: center;
+  margin-top: -7px;
+  color: white;
+  font-weight: 600;
+}
+
 
 .li-header {
   margin: 10px;
@@ -28,5 +124,17 @@ header {
 }
 
 .header-btn {
+  display: none;
   @include btn;
+
+  @media only screen and (min-width: $break-s) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media only screen and (min-width: $break-xl) {
+
+
+  }
+
 }

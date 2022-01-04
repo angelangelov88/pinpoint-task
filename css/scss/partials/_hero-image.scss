@@ -3,17 +3,30 @@
 .hero-image-container {
   background-image: url("../assets/images/apz9evdgfnmmkna3cdrd.webp");
   color: white;
-  height: calc(100vh - 135px);
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 68px);
+  margin: 10px -8% 0 -8%;
+
+  @media only screen and (min-width: $break-l) {
+
+    height: calc(100vh - 81px);
+  }
+  
+
+  @media only screen and (min-width: $break-xl) {
+
+  height: calc(100vh - 100px);
   margin: 0 -6% 0 -6%;
+}
 }
 
 .hero-image-container h1 {
   text-shadow: 2px 2px gray;
+  text-align: center;
 }
 
 .hero-btn {
