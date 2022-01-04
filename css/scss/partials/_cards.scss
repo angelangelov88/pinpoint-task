@@ -1,0 +1,151 @@
+@use '../abstracts/index' as *;
+
+.cards-container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  display: flex;
+  border: 2px red solid;
+  margin: 50px;
+  padding: 50px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px;
+  max-width: 50%;
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    margin-bottom: 47px;
+    max-width: 90%;
+    line-height: 25px;
+  }
+}
+
+.card-image {
+  margin: 50px;
+  border-radius: 10px;
+}
+
+.card-image-3 {
+  background-image: url('../assets/images/emma.jpeg');  
+  background-position: right;
+  height: 333px;
+  margin-left: -100px;
+  width: 600px;
+  h2 {
+    max-width: 245px;
+  }
+}
+
+.image-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 50px 0 20px 50px;
+  .hero-btn {
+    margin-top: 20px;
+  }
+}
+
+.glassdoor-card {
+  text-align: center;
+  margin: 100px 0 0 100px;
+  border: 1px red solid;
+  #small-text {
+    font-size: 11px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+}
+
+.glassdoor-card img {
+  width: 200px;
+  height: 40px;
+}
+
+.glassdoor-btn {
+  background-color: #28B457;
+}
+
+.cpo-image-container {
+  background-image: url('../assets/images/cpo.jpeg');
+  background-position: center;
+  height: 333px;
+  width: 600px;
+  border-radius: 10px;
+  margin: 150px auto 150px auto;
+}
+
+.cpo-text {
+  text-align: center;
+  width: 300px;
+  margin: 0px 0 0 20px;
+  padding-top: 40px;
+}
+
+.card-links-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.card-link {
+  width: 500px;
+  // border: springgreen 2px solid;
+  box-shadow: 0 3px 35px rgb(0 0 0 / 12%);
+  margin: 15px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  h2 {
+    margin-bottom: 25px;
+    width: 320px;
+
+  }
+}
+
+.bottom-text {
+  margin-bottom: 60px;
+}
+
+.footer-links {
+  text-decoration: underline;
+}
+
+footer {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 15px;
+
+}
+
+.footer-text-2 {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  color: gray;
+}
+
+.linkedin-style {
+  background-color: #0073B1;
+  color: white;
+  padding: 2px;
+  font-size: 25px !important;
+  margin-left: 50px;
+}

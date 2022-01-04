@@ -1,0 +1,25 @@
+@use '../abstracts/index' as *;
+
+.hero-image-container {
+  background-image: url("../assets/images/apz9evdgfnmmkna3cdrd.webp");
+  color: white;
+  height: calc(100vh - 135px);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -6% 0 -6%;
+}
+
+.hero-image-container h1 {
+  text-shadow: 2px 2px gray;
+}
+
+.hero-btn {
+  @include btn;
+}
+
+.fa-arrow-right {
+  margin-left: 10px;
+}

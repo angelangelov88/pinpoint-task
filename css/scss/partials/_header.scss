@@ -1,0 +1,32 @@
+@use '../abstracts/index' as *;
+
+
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 3rem 0rem 3rem;
+}
+
+#logo {
+  width: 120px;
+  height: 50px;
+}
+
+#ul-header {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.li-header {
+  margin: 10px;
+  font-weight: 600;
+}
+
+.header-btn {
+  @include btn;
+}
