@@ -28,6 +28,7 @@ header {
   }
 }
 
+
 //I added an extra html for the header for small screens because the main one kept misplacing other elements. This one works only on small screens and change to display:none for bigger
 #header-small {
   width: 102%;
@@ -120,6 +121,11 @@ header {
 .li-header {
   margin: 10px;
   font-weight: 600;
+  transition: all .2s ease-in;
+}
+
+.li-header:hover {
+  color: $brand-color;
 }
 
 .header-btn {

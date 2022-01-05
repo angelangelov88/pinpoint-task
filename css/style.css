@@ -134,6 +134,11 @@ header {
 .li-header {
   margin: 10px;
   font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+.li-header:hover {
+  color: #2BA48E;
 }
 
 .header-btn {
