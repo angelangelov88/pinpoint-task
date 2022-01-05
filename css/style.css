@@ -45,17 +45,17 @@ header {
 }
 
 #header-small {
-  width: 86%;
+  width: 102%;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
   background-color: rgba(43, 164, 142, 0.8);
   position: absolute;
+  top: 63px;
+  right: 0;
+  border-radius: 4px;
   display: none;
   z-index: 2;
-  margin-top: 56px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media only screen and (min-width: 768px) {
   #header-small {
@@ -152,6 +152,10 @@ header {
     margin-right: auto;
   }
 }
+.header-btn:hover {
+  background-color: #207c6b;
+}
+
 .hero-image-container {
   background-image: url("../assets/images/apz9evdgfnmmkna3cdrd.webp");
   color: white;
@@ -245,6 +249,10 @@ header {
     max-width: 90%;
     line-height: 25px;
   }
+}
+
+.hero-btn:hover {
+  background-color: #207c6b;
 }
 
 .card-text .hero-btn {
@@ -369,6 +377,10 @@ header {
 
 .glassdoor-btn {
   background-color: #28B457;
+}
+
+.glassdoor-btn:hover {
+  background-color: #1f8a43;
 }
 
 .cpo-image-container {
@@ -509,6 +521,10 @@ footer {
   }
 }
 
+.linkedin-style:hover {
+  background-color: #00527e;
+}
+
 .powered-by {
   margin-right: -11px;
 }
@@ -518,6 +534,10 @@ footer {
   }
 }
 
+.powered-by:hover {
+  color: black;
+}
+
 .privacy-policy {
   margin-left: -11px;
 }
@@ -525,4 +545,8 @@ footer {
   .privacy-policy {
     margin-left: 0;
   }
+}
+
+.privacy-policy:hover {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

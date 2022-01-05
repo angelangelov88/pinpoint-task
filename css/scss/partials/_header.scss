@@ -30,18 +30,17 @@ header {
 
 //I added an extra html for the header for small screens because the main one kept misplacing other elements. This one works only on small screens and change to display:none for bigger
 #header-small {
-  width: 86%;
+  width: 102%;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
   background-color: rgba($brand-color, 0.8);
   position: absolute;
+  top: 63px;
+  right: 0;
+  border-radius: 4px;
   display: none;
   z-index: 2;
-  // margin-left: -6rem;
-  margin-top: 56px;
-  margin-left: auto;
-  margin-right: auto;
   @media only screen and (min-width: $break-m) {
     display: none;
 }
@@ -137,4 +136,8 @@ header {
 
   }
 
+}
+
+.header-btn:hover {
+  background-color: darken($color: $brand-color, $amount: 10);
 }

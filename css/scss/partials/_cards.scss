@@ -52,6 +52,10 @@
 }
 }
 
+.hero-btn:hover {
+  background-color: darken($color: $brand-color, $amount: 10);
+}
+
 .card-text .hero-btn {
   display: flex;
   justify-content: center;
@@ -162,6 +166,11 @@
   background-color: #28B457;
 }
 
+.glassdoor-btn:hover {
+  background-color: darken($color: #28B457, $amount: 10);
+
+}
+
 .cpo-image-container {
   display: none;
   @media only screen and (min-width: $break-s) {
@@ -250,6 +259,7 @@
   text-decoration: underline;
 }
 
+
 footer {
   max-width: 90%;
   margin-left: auto;
@@ -292,11 +302,19 @@ footer {
 
 }
 
+.linkedin-style:hover {
+  background-color: darken($color: #0073B1, $amount: 10);
+}
+
 .powered-by {
   margin-right: -11px;
   @media only screen and (min-width: $break-s) {
     margin-right: 0;
   }
+}
+
+.powered-by:hover {
+  color: darken($color: black, $amount: 10);
 }
 
 .privacy-policy {
@@ -305,4 +323,8 @@ footer {
     margin-left: 0;
   }
 
+}
+
+.privacy-policy:hover {
+  color: darken($color: black, $amount: 10);
 }
