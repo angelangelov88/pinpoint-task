@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   @media only screen and (min-width: $break-xl) {
-    margin: 2rem 3rem 0rem 3rem;
+    margin: 2.5rem 3rem;
 }
 }
 
@@ -20,24 +20,25 @@ header {
 
 #ul-header {
   display: none;
+
   @media only screen and (min-width: $break-l) {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-  
+    margin-top: 0;
   }
 }
 
 
 //I added an extra html for the header for small screens because the main one kept misplacing other elements. This one works only on small screens and change to display:none for bigger
 #header-small {
-  width: 102%;
+  // width: 50%;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
   background-color: rgba($brand-color, 0.8);
   position: absolute;
-  top: 63px;
+  top: 73px;
   right: 0;
   border-radius: 4px;
   display: none;

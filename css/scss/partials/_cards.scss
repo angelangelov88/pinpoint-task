@@ -1,7 +1,7 @@
 @use '../abstracts/index' as *;
 
 .cards-container {
-  max-width: 90%;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -11,19 +11,17 @@
   flex-direction: column;
   // border: 2px greenyellow solid;
   margin-bottom: 50px;
-  @media only screen and (min-width: $break-m) {
+  @media only screen and (min-width: $break-s) {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     
   }
-  @media only screen and (min-width: $break-xl) {
+  @media only screen and (min-width: $break-l) {
     flex-direction: row;
-    // margin: 50px;
+    margin: 100px 50px 50px 50px;
     // padding: 50px;
-    max-width: initial;
-    margin-right: initial;
-    margin-left: initial;
+    max-width: 1260px;
 }
 }
 
@@ -34,22 +32,38 @@
   }
   p {
     margin: 30px 0 50px 0;
+    max-width: 90%;
+
   }
   @media only screen and (min-width: $break-xxl) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 50px;
+    // margin: 50px;
     max-width: 50%;
+    margin-top: 0;
     h1 {
-      font-size: 40px;
+      font-size: 35px;
+      margin-top: 0;
     }
     p {
       margin-bottom: 47px;
-      max-width: 90%;
       line-height: 25px;
     }
 }
+}
+
+//I added this extra code to make sure that the distance between card 2 and 3 on small screens is not too big. Otherwise it takes the margin from the card and from the text and makes it too big there
+.card-2 {
+  margin-bottom: 0;
+}
+
+.card-3 .card-text p {
+  @media only screen and (min-width: $break-xxl) {
+   
+      max-width: 78%;
+  
+  }
 }
 
 .hero-btn:hover {
@@ -67,26 +81,32 @@
 .card-image {
   margin: 0px;
   border-radius: 10px;
-
-  @media only screen and (min-width: $break-m) {
-    margin: 0 50px;
+  max-width: 500px;
+  max-height: 500px;
+  @media only screen and (min-width: $break-s) {
     margin-left: auto;
     margin-right: auto;
-    max-width: 500px;
-    max-height: 500px;
-
   }
   @media only screen and (min-width: $break-l) {
-    margin: 50px;
+    margin: 0 50px 0 0px;
+    max-width: 370px;
+    max-height: 270px;
+
+
+  }
+  @media only screen and (min-width: $break-xl) {
+    max-width: 570px;
+    max-height: 470px;
+
   }
 }
 
 .card-image-3 {
   display: none;  
-  @media only screen and (min-width: $break-xl) {
+  @media only screen and (min-width: $break-l) {
     display: block;
     background-image: url('../assets/images/emma.jpeg'); 
-    background-position: right;
+    background-position: center;
     height: 333px;
     width: 2600px;
     h2 {
@@ -96,7 +116,7 @@
 
 }
   @media only screen and (min-width: $break-xxl) {
-    margin-left: -100px;
+    margin-left: -70px;
     width: 600px;
     max-width: none;
     h2 {
@@ -110,7 +130,7 @@
   margin: 0px;
   border-radius: 10px;
 
-  @media only screen and (min-width: $break-xl) {
+  @media only screen and (min-width: $break-l) {
     display: none;
 }
 }
@@ -129,7 +149,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    width: 141px;
+    width: 142px;
     font-size: 13px;
     @media only screen and (min-width: $break-xxl) {
       width: initial;
@@ -142,7 +162,7 @@
   h1 {
     font-size: 20px;
     @media only screen and (min-width: $break-xxl) {
-      font-size: 40px;
+      font-size: 35px;
     }
   }
   // border: 1px red solid;
@@ -207,18 +227,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-top: 50px;
 
 
   @media only screen and (min-width: $break-l) {
   flex-direction: row;
+  margin-bottom: 100px;
+
 }
 }
 
 .card-link {
   box-shadow: 0 3px 35px rgb(0 0 0 / 12%);
-  margin: 15px;
+  margin: 0 0 15px 0;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -235,20 +257,20 @@
   }
 @media only screen and (min-width: $break-m) {
   h2 {
-    width: 320px;
+    width: 300px;
 }  
 
 }
   @media only screen and (min-width: $break-l) {
     width: 500px;
     font-size: initial;
+    margin: 15px;
 }
 }
 
 .bottom-text {
   font-size: 15px;  
   margin-bottom: 60px;
-
 
   @media only screen and (min-width: $break-m) {
     font-size: initial;
@@ -261,11 +283,10 @@
 
 
 footer {
-  max-width: 90%;
+  line-height: 15px;
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 15px;
-
 }
 
 .footer-text {
