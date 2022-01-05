@@ -1,16 +1,20 @@
 const headerSmall = document.getElementById('header-small');
 const menuLine = document.getElementsByClassName('menu-lines')[0];
 const menuX = document.getElementsByClassName('menu-x')[0];
+const menuTitle = document.getElementsByClassName('menu-title')[0];
 
 function openCloseNav() {
   if (headerSmall.style.display === "block") {
     headerSmall.style.display = "none";
     menuLine.style.display = "block";
     menuX.style.display = 'none';
+    menuTitle.style.display = 'block';
+
   } else {
     headerSmall.style.display = "block";
     menuLine.style.display = "none";
     menuX.style.display = 'block';
+    menuTitle.style.display = 'none';
   }
 }
 
@@ -20,6 +24,7 @@ function removeNav(x) {
     headerSmall.style.display = "none";
     menuLine.style.display = "block";
     menuX.style.display = 'none';
+    menuTitle.style.display = 'block';
 } else {
   headerSmall.style.display = "none";
 }

@@ -12,8 +12,8 @@ a {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  border: 2px red solid;
 }
+
 li {
   list-style-type: none;
 }
@@ -111,9 +111,9 @@ header {
 .menu-x {
   display: none;
   color: white;
-  font-size: 33px;
-  margin-top: 1px;
-  margin-left: 24px;
+  font-size: 40px;
+  margin-top: 0px;
+  margin-left: 21px;
 }
 
 .menu-line {
@@ -202,7 +202,6 @@ header {
 .card {
   display: flex;
   flex-direction: column;
-  border: 2px greenyellow solid;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 768px) {
@@ -215,8 +214,6 @@ header {
 @media only screen and (min-width: 1260px) {
   .card {
     flex-direction: row;
-    margin: 50px;
-    padding: 50px;
     max-width: initial;
     margin-right: initial;
     margin-left: initial;
@@ -232,7 +229,7 @@ header {
 .card-text p {
   margin: 30px 0 50px 0;
 }
-@media only screen and (min-width: 1260px) {
+@media only screen and (min-width: 1740px) {
   .card-text {
     display: flex;
     flex-direction: column;
@@ -288,11 +285,21 @@ header {
     background-image: url("../assets/images/emma.jpeg");
     background-position: right;
     height: 333px;
+    width: 2600px;
+  }
+  .card-image-3 h2 {
+    font-size: 17px;
+    max-width: 125px;
+  }
+}
+@media only screen and (min-width: 1740px) {
+  .card-image-3 {
     margin-left: -100px;
     width: 600px;
     max-width: none;
   }
   .card-image-3 h2 {
+    font-size: 25px;
     max-width: 245px;
   }
 }
@@ -312,21 +319,34 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 50px 0 20px 50px;
+  margin: 50px 0 20px 10px;
+}
+@media only screen and (min-width: 1740px) {
+  .image-text-container {
+    margin-left: 50px;
+  }
 }
 .image-text-container .hero-btn {
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  width: 141px;
+  font-size: 13px;
+}
+@media only screen and (min-width: 1740px) {
+  .image-text-container .hero-btn {
+    width: initial;
+    font-size: initial;
+  }
 }
 
 .glassdoor-card {
-  border: 1px red solid;
+  text-align: center;
 }
 .glassdoor-card h1 {
   font-size: 20px;
 }
-@media only screen and (min-width: 1260px) {
+@media only screen and (min-width: 1740px) {
   .glassdoor-card h1 {
     font-size: 40px;
   }
@@ -336,9 +356,8 @@ header {
   margin-bottom: 50px;
   margin-top: 40px;
 }
-@media only screen and (min-width: 1260px) {
+@media only screen and (min-width: 1740px) {
   .glassdoor-card {
-    text-align: center;
     margin: 100px 0 0 100px;
   }
 }
@@ -388,34 +407,57 @@ header {
   }
 }
 
-@media only screen and (min-width: 1260px) {
+.card-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 992px) {
   .card-links-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 150px;
+    flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 1260px) {
+.card-link {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.12);
+  margin: 15px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.card-link h2 {
+  margin-bottom: 25px;
+  width: 166px;
+}
+.card-link .hero-btn {
+  min-width: 132px;
+}
+@media only screen and (min-width: 768px) {
+  .card-link h2 {
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 992px) {
   .card-link {
     width: 500px;
-    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.12);
-    margin: 15px;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-  }
-  .card-link h2 {
-    margin-bottom: 25px;
-    width: 320px;
+    font-size: initial;
   }
 }
 
 .bottom-text {
+  font-size: 15px;
   margin-bottom: 60px;
+}
+@media only screen and (min-width: 768px) {
+  .bottom-text {
+    font-size: initial;
+  }
 }
 
 .footer-links {
@@ -427,6 +469,20 @@ footer {
   margin-left: auto;
   margin-right: auto;
   line-height: 15px;
+}
+
+.footer-text {
+  font-size: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-text {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1260px) {
+  .footer-text {
+    font-size: initial;
+  }
 }
 
 .footer-text-2 {
@@ -444,5 +500,29 @@ footer {
   color: white;
   padding: 2px;
   font-size: 25px !important;
-  margin-left: 50px;
+  position: absolute;
+  margin-left: 11px;
+}
+@media only screen and (min-width: 576px) {
+  .linkedin-style {
+    margin-left: 50px;
+  }
+}
+
+.powered-by {
+  margin-right: -11px;
+}
+@media only screen and (min-width: 576px) {
+  .powered-by {
+    margin-right: 0;
+  }
+}
+
+.privacy-policy {
+  margin-left: -11px;
+}
+@media only screen and (min-width: 576px) {
+  .privacy-policy {
+    margin-left: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
