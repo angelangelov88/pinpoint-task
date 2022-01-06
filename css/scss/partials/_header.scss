@@ -9,26 +9,23 @@ header {
   display: flex;
   justify-content: space-between;
   transition: all .4s ease-out;
-  
   @media only screen and (min-width: $break-xl) {
     margin: 2.5rem 3rem;
-    
 }
 }
 
+//I added the sticky class for the navbar when the user scrolls down. I have styled it a bit differently than the main one - it is green/transparent and has different colours for the logo, text and the button. Also it appears only on bigger screens over 992px
 .sticky {
   @media only screen and (min-width: $break-l) {
-
-  background-color: rgba($color: $brand-color, $alpha: .7);
-  
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  margin: 0px;
-  padding: 10px;
-  transition: all .4s ease-out;
+    background-color: rgba($color: $brand-color, $alpha: .7);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0px;
+    padding: 10px;
+    transition: all .4s ease-out;
 }
 }
 
@@ -51,24 +48,21 @@ header {
 .sticky .li-header:hover {
   text-decoration: underline;
   color: white;
-  
 }
 
-
+//This is the logo in the main navbar
 #logo {
   background-image: url('../assets/images/goco-group-logo.png');
   background-size: 120px 50px;
   width: 120px;
   height: 50px;
   @media only screen and (min-width: $break-xxl) {
-
-  margin-left: 100px;
+    margin-left: 100px;
 }
 }
 
 #ul-header {
   display: none;
-
   @media only screen and (min-width: $break-l) {
     display: flex;
     margin-left: auto;
@@ -76,10 +70,10 @@ header {
     margin-top: 0;
     font-size: 12px;
     padding-top: 8px;
-  }
+}
   @media only screen and (min-width: $break-xl) {
     font-size: initial;
-  }
+}
 }
 
 .blocker {
@@ -90,12 +84,10 @@ header {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  //border: 5px yellow solid;
 }
 
-//I added an extra html for the header for small screens because the main one kept misplacing other elements. This one works only on small screens and change to display:none for bigger
+//I added an extra html for the header for small screens. This one works only on small screens and change to display:none for bigger. This is basically the hamburger dropdown
 #header-small {
-  // width: 50%;
   text-transform: uppercase;
   color: white;
   font-weight: 600;
@@ -108,9 +100,6 @@ header {
   z-index: 2;
   @media only screen and (min-width: $break-m) {
     display: none;
-}
-  @media screen and (-ms-high-contrast: none) {
-    text-align: right;
 }
 }
 
@@ -125,6 +114,7 @@ header {
 .li-header-small {
   line-height: 45px;
 }
+
 //Hamburger styling
 .btn-menu-xs {
   background-color: $brand-color;
@@ -132,17 +122,12 @@ header {
   width: 65px;
   border-radius: 4px;
   z-index: 1;
-  // float: right;
-  // margin-top: -77px;
-  // margin-right: 10px;
   @media only screen and (min-width: $break-l) {
     display: none;
 }
 }
 
 .btn-menu-xs:hover {
-	//background-color: darken($color: $brand-color-dark, $amount: 10%);
-  // background-color: darken($color: #333a56, $amount: 10%);
   background-color: $brand-color;
   cursor: pointer;
 }
@@ -150,13 +135,6 @@ header {
 // The next few properties are for the hamburger
 .menu-lines {
   padding: 10px 0 4px 16px;
-  @media only screen and (min-width: $break-l) {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  width: 33px;
-  margin: 10px auto 5px;
-}
 }
 
 .menu-x {
@@ -182,7 +160,7 @@ header {
   font-weight: 600;
 }
 
-
+//This is styling for the header li elements
 .li-header {
   margin: 10px;
   font-weight: 600;
@@ -193,18 +171,14 @@ header {
   color: $brand-color;
 }
 
+//This is the button styling. I used a mixin to add the properties as I use same for all the buttons on the page. The button is hidden on very small screens and appears in the middle on middle sized screens. On big screens it is on the right side as requested
 .header-btn {
   display: none;
   @include btn;
-
   @media only screen and (min-width: $break-s) {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-  @media only screen and (min-width: $break-l) {
-
-
   }
   @media only screen and (min-width: $break-xl) {
     width: initial;

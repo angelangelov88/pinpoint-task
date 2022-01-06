@@ -1,60 +1,57 @@
 @use '../abstracts/index' as *;
 
+//I have added this container as it was pointed out that the max-width of the elements on the page should not exceed 1260px. So now all elements are in this container
 .cards-container {
   max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
 }
 
+//This is the card container. I have them shows as flex/column for small screens in order to have only one item per line and over 992px I change to row.
 .card {
   display: flex;
   flex-direction: column;
-  // border: 2px greenyellow solid;
   margin-bottom: 50px;
   @media only screen and (min-width: $break-s) {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    
-  }
+}
   @media only screen and (min-width: $break-l) {
     flex-direction: row;
     margin: 100px 50px 50px 50px;
-    // padding: 50px;
     max-width: 1260px;
 }
-@media only screen and (min-width: $break-xxl) {
-  // justify-content: space-between;
-  margin: 100px 0 50px 33px;
+  @media only screen and (min-width: $break-xxl) {
+    margin: 100px 0 50px 33px;
 }
 }
 
+//This is the card's text div. It contains the title, paragraph and button. So I have styled the h2 and p in here. Button is styled separately
 .card-text {
   margin: 10px 0 50px 0;
   h1 {
     font-size: 20px;
-  }
+}
   p {
     margin: 30px 0 50px 0;
     max-width: 90%;
-
-  }
+}
   @media only screen and (min-width: $break-xxl) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    // margin: 50px;
     max-width: 50%;
     margin-top: 0;
     h1 {
       font-size: 35px;
       margin-top: 0;
       max-width: 470px;
-    }
+}
     p {
       line-height: 25px;
       margin: 0 0 30px 0 ;
-    }
+}
 }
 }
 
@@ -63,26 +60,28 @@
   margin-bottom: 0;
 }
 
+//This is specifically for the card 3 paragraph element as it has some different styling requirements
 .card-3 .card-text p {
   @media only screen and (min-width: $break-xxl) {
-   
-      max-width: 78%;
-  
-  }
+    max-width: 78%;
+}
 }
 
+//This is the hover effect for the buttons
 .hero-btn:hover {
   background-color: darken($color: $brand-color, $amount: 10);
 }
 
+//This is for the buttons in the card-text div
 .card-text .hero-btn {
   display: flex;
   justify-content: center;
   @media only screen and (min-width: $break-m) {
     display: initial;
-  }
+}
 }
 
+//This is the styling of the images for different screens
 .card-image {
   margin: 0px;
   border-radius: 10px;
@@ -91,21 +90,19 @@
   @media only screen and (min-width: $break-s) {
     margin-left: auto;
     margin-right: auto;
-  }
+}
   @media only screen and (min-width: $break-l) {
     margin: 0 50px 0 0px;
     max-width: 370px;
     max-height: 270px;
-
-
-  }
+}
   @media only screen and (min-width: $break-xl) {
     max-width: 570px;
     max-height: 470px;
-
-  }
+}
 }
 
+//This is the specific properties for the card 3 image and text. I have shown only the image on small screens with no text, thus the display for this one is none. This appears on screens bigger than 992px
 .card-image-3 {
   display: none;  
   @media only screen and (min-width: $break-l) {
@@ -117,8 +114,7 @@
     h2 {
       font-size: 17px;
       max-width: 220px;
-    }
-
+}
 }
   @media only screen and (min-width: $break-xxl) {
     margin-left: -70px;
@@ -128,19 +124,20 @@
       font-size: 25px;
       max-width: 265px;
       text-align: center;
-    }
+}
 }
 }
 
+//This is the styling of the card 3 image for small screens
 .card-3 .card-image-small-screen {  
   margin: 0px;
   border-radius: 10px;
-
   @media only screen and (min-width: $break-l) {
     display: none;
 }
 }
 
+//This is the card 3 image text styling.
 .image-text-container {
   display: flex;
   flex-direction: column;
@@ -149,35 +146,32 @@
   margin: 50px 0 20px 10px;
   @media only screen and (min-width: $break-xxl) {
     margin-left: 50px;
-  }
-
+}
   .hero-btn {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    // width: 142px;
     font-size: 13px;
     @media only screen and (min-width: $break-xxl) {
       width: initial;
-      // font-size: initial;
-    }
-  }
+}
+}
 }
 
+//This is the next element on the page - glassdoor-card. I decided to style all the inner divs in the same class by nesting them
 .glassdoor-card {
+  text-align: center;
   h1 {
     font-size: 20px;
     @media only screen and (min-width: $break-xxl) {
       font-size: 30px;
-    }
-  }
-  // border: 1px red solid;
-  text-align: center;
+}
+}
   #small-text {
     font-size: 11px;
     margin-bottom: 50px;
     margin-top: 40px;
-  }
+}
   @media only screen and (min-width: $break-xxl) {
   margin: 100px 0 0 100px;
 }
@@ -188,28 +182,28 @@
   height: 40px;
 }
 
+//I added this as the colour of the button is different than the rest of the buttons on the page
 .glassdoor-btn {
   background-color: #28B457;
 }
 
 .glassdoor-btn:hover {
   background-color: darken($color: #28B457, $amount: 10);
-
 }
 
+//This is the CPO image container. I hide it on very small screens and show it on screens bigger than 576px
 .cpo-image-container {
   display: none;
+  background-image: url('../assets/images/cpo.jpeg');
+  background-position: center;
+  border-radius: 10px;
+  height: 333px;
+  margin: 50px auto 50px auto;
+  max-width: 600px;
   @media only screen and (min-width: $break-s) {
     display: block;
-    background-image: url('../assets/images/cpo.jpeg');
-    background-position: center;
-    border-radius: 10px;
-    height: 333px;
-    margin: 50px auto 50px auto;
-    max-width: 600px;
-    @media only screen and (min-width: $break-xl) {
-      width: 600px;
-
+  @media only screen and (min-width: $break-xl) {
+    width: 600px;
     margin: 150px auto 150px auto;
 }
 }
@@ -220,13 +214,7 @@
   width: 300px;
   margin: 0px 0 0 20px;
   padding-top: 40px;
-  @media only screen and (min-width: $break-xl) {
-
-  text-align: center;
-  width: 300px;
-  margin: 0px 0 0 20px;
-  padding-top: 40px;
-}
+  font-size: 14px;
 }
 
 .card-links-container {
@@ -235,15 +223,13 @@
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 50px;
-
-
   @media only screen and (min-width: $break-l) {
-  flex-direction: row;
-  margin-bottom: 100px;
-
+    flex-direction: row;
+    margin-bottom: 100px;
 }
 }
 
+//I have styled the card-link div in a nested way too. All its children have been styled in here
 .card-link {
   box-shadow: 0 3px 35px rgb(0 0 0 / 22%);
   margin: 0 0 15px 0;
@@ -260,33 +246,30 @@
 }
   .hero-btn {
     min-width: 146px
-  }
-@media only screen and (min-width: $break-m) {
-  h2 {
-    width: 360px;
+}
+  @media only screen and (min-width: $break-m) {
+    h2 {
+      width: 360px;
 }  
-
 }
   @media only screen and (min-width: $break-l) {
-    // width: 500px;
     font-size: initial;
     margin: 15px;
 }
 }
 
+//This is the agencies text. I decreased the font size a bit for small screens
 .bottom-text {
   font-size: 15px;  
   margin-bottom: 60px;
-
   @media only screen and (min-width: $break-m) {
     font-size: initial;
-  }
+}
 }
 
 .footer-links {
   text-decoration: underline;
 }
-
 
 footer {
   line-height: 15px;
@@ -295,17 +278,18 @@ footer {
   margin-right: auto;
 }
 
+//This is all the long text including the links
 .footer-text {
   font-size: 10px;
   @media only screen and (min-width: $break-m) {
     font-size: 15px;
-  }
+}
   @media only screen and (min-width: $break-xl) {
     font-size: initial;
-  }
-
+}
 }
 
+//This is the part with the privacy polict, linkedin and powered by
 .footer-text-2 {
   margin-top: 80px;
   display: flex;
@@ -325,21 +309,24 @@ footer {
   margin-left: 11px;
   @media only screen and (min-width: $break-s) {
     margin-left: 50px;
-  }
-
+}
 }
 
 .linkedin-style:hover {
   background-color: darken($color: #0073B1, $amount: 10);
 }
 
+//Added the width property here as the text was below the linkedin logo. I restricted the width of the text for small screens so it appears on 2 separate lines 
 .powered-by {
   margin-right: -11px;
+  max-width: 100px;
   @media only screen and (min-width: $break-s) {
     margin-right: 0;
-  }
+    max-width: initial;
+}
 }
 
+//I have added little hover effect on the 2 links
 .powered-by:hover {
   color: darken($color: black, $amount: 10);
 }
@@ -348,8 +335,7 @@ footer {
   margin-left: -11px;
   @media only screen and (min-width: $break-s) {
     margin-left: 0;
-  }
-
+}
 }
 
 .privacy-policy:hover {

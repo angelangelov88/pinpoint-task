@@ -1,5 +1,6 @@
 @use '../abstracts/index' as *;
 
+//This is the container of the hero image and text
 .hero-image-container {
   background-image: url("../assets/images/apz9evdgfnmmkna3cdrd.webp");
   color: white;
@@ -8,24 +9,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+//I have added a calc function to make sure that I display the image in full height depending on the screen size. I decrease the size by the header size
   height: calc(100vh - 68px);
   margin: 10px -8% 0 -8%;
-
   @media only screen and (min-width: $break-l) {
-
     height: calc(100vh - 81px);
-  }
-  
-
+}
   @media only screen and (min-width: $break-xl) {
-
-  height: calc(100vh - 100px);
-  margin: 0 -6% 0 -6%;
-  background-size: 100vw;
-
+    height: calc(100vh - 100px);
+    margin: 0 -6% 0 -6%;
+    background-size: 100vw;
 }
 }
 
+//I added some shadow to have the text shown more clearly
 .hero-image-container h1 {
   text-shadow: 2px 2px gray;
   text-align: center;
