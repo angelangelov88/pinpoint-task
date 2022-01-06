@@ -75,6 +75,7 @@ header {
     margin-right: auto;
     margin-top: 0;
     font-size: 12px;
+    padding-top: 8px;
   }
   @media only screen and (min-width: $break-xl) {
     font-size: initial;
@@ -202,7 +203,6 @@ header {
     margin-right: auto;
   }
   @media only screen and (min-width: $break-l) {
-    width: 104px;
 
 
   }

@@ -87,6 +87,7 @@ header {
     margin-right: auto;
     margin-top: 0;
     font-size: 12px;
+    padding-top: 8px;
   }
 }
 @media only screen and (min-width: 1260px) {
@@ -219,11 +220,6 @@ header {
     margin-right: auto;
   }
 }
-@media only screen and (min-width: 992px) {
-  .header-btn {
-    width: 104px;
-  }
-}
 @media only screen and (min-width: 1260px) {
   .header-btn {
     width: initial;
@@ -254,6 +250,7 @@ header {
   .hero-image-container {
     height: calc(100vh - 100px);
     margin: 0 -6% 0 -6%;
+    background-size: 100vw;
   }
 }
 
