@@ -23,6 +23,10 @@
     // padding: 50px;
     max-width: 1260px;
 }
+@media only screen and (min-width: $break-xxl) {
+  // justify-content: space-between;
+  margin: 100px 0 50px 33px;
+}
 }
 
 .card-text {
@@ -45,10 +49,11 @@
     h1 {
       font-size: 35px;
       margin-top: 0;
+      max-width: 470px;
     }
     p {
-      margin-bottom: 47px;
       line-height: 25px;
+      margin: 0 0 30px 0 ;
     }
 }
 }
@@ -111,7 +116,7 @@
     width: 2600px;
     h2 {
       font-size: 17px;
-      max-width: 125px;
+      max-width: 220px;
     }
 
 }
@@ -121,7 +126,8 @@
     max-width: none;
     h2 {
       font-size: 25px;
-      max-width: 245px;
+      max-width: 265px;
+      text-align: center;
     }
 }
 }
@@ -149,11 +155,11 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    width: 142px;
+    // width: 142px;
     font-size: 13px;
     @media only screen and (min-width: $break-xxl) {
       width: initial;
-      font-size: initial;
+      // font-size: initial;
     }
   }
 }
@@ -162,7 +168,7 @@
   h1 {
     font-size: 20px;
     @media only screen and (min-width: $break-xxl) {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
   // border: 1px red solid;
@@ -239,30 +245,30 @@
 }
 
 .card-link {
-  box-shadow: 0 3px 35px rgb(0 0 0 / 12%);
+  box-shadow: 0 3px 35px rgb(0 0 0 / 22%);
   margin: 0 0 15px 0;
   padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 15px;
   h2 {
     margin-bottom: 25px;
     width: 166px;
 }
   .hero-btn {
-    min-width: 132px
+    min-width: 146px
   }
 @media only screen and (min-width: $break-m) {
   h2 {
-    width: 300px;
+    width: 360px;
 }  
 
 }
   @media only screen and (min-width: $break-l) {
-    width: 500px;
+    // width: 500px;
     font-size: initial;
     margin: 15px;
 }
