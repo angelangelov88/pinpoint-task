@@ -239,6 +239,11 @@ header {
     background-size: 100vw;
   }
 }
+@media screen and (-ms-high-contrast: none) {
+  .hero-image-container {
+    background-image: url("../assets/images/apz9evdgfnmmkna3cdrd.png");
+  }
+}
 
 .hero-image-container h1 {
   text-shadow: 2px 2px gray;
